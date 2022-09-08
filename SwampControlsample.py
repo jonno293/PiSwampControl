@@ -5,16 +5,18 @@ import time
 import csv
 import pandas as pd
 import DHT11
-import masterstat 
+import masterstat
 
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(8, GPIO.OUT)
 
 switches = []
 fanHi = 0.005
 fanLo = 0.005
 purgePump = 0.005
 pump = 0.005
+config = 1
+#1 is with a relay board 2 is using the masterstat setup to control a masterstat
+#relay board by PWM commands
+
 temp = 75
 overrideTime = 2.5 #hours
 setTemp = 75
